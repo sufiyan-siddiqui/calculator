@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/* font-family: 'Josefin Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+/*  red 8e4162
+    yellow  eec170
+    blue    002147 */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'poppins', sans-serif;
+    transition: all .7s ease;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+ 
+body{background-color: #8e4162; width: 100vw; height: 100vh; display: flex;}
+
+.container{    width: 40rem; height: 45rem; background-color: #eec170; margin: auto; box-shadow: 1px 1px 10px #002147; border-radius: 2%; padding: 2rem; position: relative;}
+
+.container .display{width: 90%; height: 15%; background-color: #002147; border-radius: 2%; color: #eec170; margin: 2% auto; font-size: 3rem; padding: 1rem; text-align: right; overflow: hidden; }
+
+.container section{display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(5, 5rem); gap: 1rem; margin-top: 10%;}
+.container section div{background-color: #8e4162; border-radius: 2%; box-shadow: 2px 2px 2px #002147; font-size: 2rem; display: flex;align-items: center; justify-content: center; font-weight: bold; cursor:pointer; color: #eec170; }
+
+.container section div:last-child{background-color: #002147; color: #eec170; box-shadow: 2px 2px 2px #8e4162;}
+
+.container section div:hover{background-color: #eec170; color: #002147; transition: .3s ease; box-shadow: 3px 3px 3px #002147; }
+
+.container section div:first-child, .container section div:nth-child(2), .container section div:nth-child(3),.container section div:nth-child(4),.container section div:nth-child(2),.container section div:nth-child(8),.container section div:nth-child(12),.container section div:nth-child(16),.container section div:nth-child(17),.container section div:nth-child(19){color: black;}
+
+a{position: absolute; top: 3%; right: 3%; color: #002147; font-size: 3rem; text-shadow: #eec170 1px 1px 2px; transition:all .5s ease;}
+a:hover{color: #eec170; text-shadow: #002147 1px 1px 2px; transform: scale(1.2);  }
+
+.loader{position: fixed; width: 100vw; height: 100vh; background-color: #eec170; color: #eec170; font-size: 10rem; display: flex; animation: load .8s infinite alternate ease; text-shadow: 1px 1px 2px black ; transition: all .4s ease; }
+.loader i{margin: auto;}
+@keyframes load { 50%{color: #002147;} 100%{color: #8e4162;}  }
+
+@media (max-width:500px) {
+    .container{width: 30rem; height: 42rem;}
+    .container section div{font-size: 1.8rem;}
+    a{top: 1%;}
+}
